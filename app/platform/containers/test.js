@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+// Cmps
+import Button from '../components/customButton';
+
+// Actions
 import * as ui from '../../actions/ui';
 
 
@@ -10,13 +14,13 @@ import * as ui from '../../actions/ui';
  * Test Component
  */
 class Test extends React.Component {
-    
+
     render() {
         const { outlet, scope } = this.props;
 
         return(
             <div className="test">
-                <button>Click me!</button>
+                <Button text="Click me!" />
             </div>
         )
     }
