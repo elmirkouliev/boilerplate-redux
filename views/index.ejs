@@ -1,0 +1,35 @@
+<%
+    react = typeof(react) !== 'undefined' ? react : '';
+%>
+
+<!DOCTYPE html>
+<!--[if lte IE 9]> <html lang='en' class="ie"> <![endif]-->
+<!--[if !IE ]> <html lang='en'> <![endif]-->
+<head>
+
+    <title>Redux BoilerPlate</title>
+
+    <% // Load asset based on page, check if in dev mode or not %>
+    <% if(typeof(css) !== 'undefined'){ %>
+        <link rel="stylesheet" type="text/css" href="<%= css %>">
+    <% } %>
+</head>
+<body>
+
+
+<div id="app"><%- react %></div>
+
+</body>
+
+<!-- Props -->
+<% if(typeof(props) !== 'undefined'){ %>
+    <script type="text/javascript">window.__initialProps__ =  <%- props %></script>
+<% } %>
+
+<% // Load asset based on page %>
+<% if(typeof(js) !== 'undefined'){ %>
+    <script type="text/javascript" src="<%= js %>"></script>
+<% } %>
+
+</html>
+
